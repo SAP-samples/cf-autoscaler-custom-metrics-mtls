@@ -9,7 +9,7 @@ require (
 	github.com/joefitzgerald/rainbow-reporter v0.1.0
 	github.com/onsi/ginkgo/v2 v2.9.2
 	github.com/onsi/gomega v1.27.5
-	github.com/sclevine/spec v1.2.0
+	github.com/sclevine/spec v1.4.0
 )
 
 require (
