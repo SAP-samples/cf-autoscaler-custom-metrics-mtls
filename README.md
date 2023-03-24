@@ -45,7 +45,7 @@ This tutorial includes the following steps
 sample-output
 ```shell
 $ cf push --no-start -f deploy/app-manifest.yml -p deploy/build
-Pushing app golang-autoscaler-custom-metrics to org ak_autoscaler_dev / space ak-test-space as ak-user@xxx.com...
+Pushing app golang-autoscaler-custom-metrics to org ak_autoscalerxxx / space ak-test-space as ak-user@xxx.com...
 Applying manifest file deploy/app-manifest.yml...
 
 Updating with these attributes...
@@ -57,7 +57,7 @@ Updating with these attributes...
     path: /Users/development/golang-autoscaler-custom-metrics/deploy/build
     memory: 128M
 +   default-route: true
-    stack: cflinuxfs3
+    stack: cflinuxfs4
     buildpacks:
       binary_buildpack
     command: ./golang-autoscaler-custom-metrics
@@ -86,7 +86,7 @@ start command:   ./golang-autoscaler-custom-metrics
 
 ```shell
 $ cf create-service autoscaler standard ak-test-autoscaler
-Creating service instance ak-test-autoscaler in org ak_autoscaler_dev / space ak-test-space as as ak-user@xxx.com...
+Creating service instance ak-test-autoscaler in org ak_autoscalerxxx / space ak-test-space as as ak-user@xxx.com...
 
 Service instance ak-test-autoscaler created.
 OK
@@ -96,7 +96,7 @@ OK
 
 ```shell
 $ cf bind-service golang-autoscaler-custom-metrics ak-test-autoscaler -c deploy/custom-metrics-policy.json
-Binding service instance ak-test-autoscaler to app golang-autoscaler-custom-metrics in org ak_autoscaler_dev / space ak-test-space as ak-user@xxx.com...
+Binding service instance ak-test-autoscaler to app golang-autoscaler-custom-metrics in org ak_autoscalerxxx / space ak-test-space as ak-user@xxx.com...
 OK
 
 TIP: Use 'cf restage golang-autoscaler-custom-metrics' to ensure your env variable changes take effect
@@ -106,7 +106,7 @@ TIP: Use 'cf restage golang-autoscaler-custom-metrics' to ensure your env variab
 
 ```shell
 $ cf env golang-autoscaler-custom-metrics
-Getting env variables for app golang-autoscaler-custom-metrics in org ak_autoscaler_dev / space ak-test-space as ak-user@xxx.com...
+Getting env variables for app golang-autoscaler-custom-metrics in org ak_autoscalerxxx / space ak-test-space as ak-user@xxx.com...
 System-Provided:
 VCAP_SERVICES: {
   "autoscaler": [
@@ -151,7 +151,7 @@ VCAP_APPLICATION: {
 
 ```shell
 cf start golang-autoscaler-custom-metrics
-Starting app golang-autoscaler-custom-metrics in org ak_autoscaler_dev / space ak-test-space as ak-user@xxx.com...
+Starting app golang-autoscaler-custom-metrics in org ak_autoscalerxxx / space ak-test-space as ak-user@xxx.com...
 
 Staging app and tracing logs...
    Downloading binary_buildpack...
@@ -169,7 +169,7 @@ Staging app and tracing logs...
    Uploading build artifacts cache...
    Uploaded build artifacts cache (216B)
 
-Starting app golang-autoscaler-custom-metrics in org ak_autoscaler_dev / space ak-test-space as ak-user@xxx.com...
+Starting app golang-autoscaler-custom-metrics in org ak_autoscalerxxx / space ak-test-space as ak-user@xxx.com...
 
 Waiting for app to start...
 
@@ -181,7 +181,7 @@ name:              golang-autoscaler-custom-metrics
 requested state:   started
 routes:            golang-autoscaler-custom-metrics.cfapps.sap.hana.ondemand.com
 last uploaded:     Fri 30 Dec 16:04:06 CET 2022
-stack:             cflinuxfs3
+stack:             cflinuxfs4
 buildpacks:
 	name               version   detect output   buildpack name
 	binary_buildpack   1.0.47    binary          binary
@@ -202,13 +202,13 @@ Scale out > `$ curl https://golang-autoscaler-custom-metrics.cfapps.abc.com/busy
 ```shell
 Every 2.0s: cf app golang-autoscaler-custom-metrics                                                                                                                                          XNQNV6VGJC: Fri Dec 30 16:19:22 2022
 
-Showing health and status for app golang-autoscaler-custom-metrics in org ak_autoscaler_dev / space ak-test-space as ak-user@xxx.com...
+Showing health and status for app golang-autoscaler-custom-metrics in org ak_autoscalerxxx / space ak-test-space as ak-user@xxx.com...
 
 name:              golang-autoscaler-custom-metrics
 requested state:   started
 routes:            golang-autoscaler-custom-metrics.cfapps.sap.hana.ondemand.com
 last uploaded:     Fri 30 Dec 16:16:35 CET 2022
-stack:             cflinuxfs3
+stack:             cflinuxfs4
 buildpacks:
         name               version   detect output   buildpack name
         binary_buildpack   1.0.47    binary          binary

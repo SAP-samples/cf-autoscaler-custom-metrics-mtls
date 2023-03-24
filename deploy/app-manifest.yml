@@ -5,7 +5,7 @@ applications:
     instances: 1
     memory: 128M
     disk_quota: 128M
-    stack: cflinuxfs3
+    stack: cflinuxfs4
     buildpacks:
       - binary_buildpack
     command: ./golang-autoscaler-custom-metrics
