@@ -1,3 +1,5 @@
+[![REUSE status](https://api.reuse.software/badge/github.com/SAP-samples/cf-autoscaler-custom-metrics-mtls)](https://api.reuse.software/info/github.com/SAP-samples/cf-autoscaler-custom-metrics-mtls)
+
 # Demonstrate Custom Metrics Feature in Application Autoscaler
 
 ## Description
