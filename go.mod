@@ -7,7 +7,7 @@ require (
 	github.com/cloudfoundry-community/go-cfenv v1.18.0
 	github.com/gin-gonic/gin v1.9.1
 	github.com/joefitzgerald/rainbow-reporter v0.1.0
-	github.com/onsi/ginkgo/v2 v2.9.5
+	github.com/onsi/ginkgo/v2 v2.9.7
 	github.com/onsi/gomega v1.27.7
 	github.com/sclevine/spec v1.4.0
 )
