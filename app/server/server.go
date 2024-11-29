@@ -14,13 +14,21 @@ func NewServer(appConfig *cfenv.App) *Server {
 	router := gin.Default()
 	server := &Server{router: router}
 
-	ah := NewAppHandler(appConfig, "https://autoscaler-metrics-mtls.cf.sap.hana.ondemand.com")
+	metrics := map[string]interface{}{
+		"cpu": &CPUWaster{},
+	}
+
+	ah := NewAppHandler(appConfig, "https://autoscaler-metrics-mtls.cf.sap.hana.ondemand.com", metrics)
+
 	router.GET("/", ah.GetHome)
 
-	// send POST request to custom metrics URL
+	// custom metrics handlers
 	router.GET("/busy/:metricValue", ah.Busy)
-
 	router.GET("/not-busy/:metricValue", ah.NotBusy)
+
+	// cpu handlers
+	router.GET("/cpu/:utilization/:minutes", ah.IncreaseCPU)
+	router.GET("/cpu/stop", ah.StopCPU)
 
 	return server
 }
