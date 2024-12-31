@@ -1,11 +1,11 @@
 # app-manifest.yml
 ---
 applications:
-  - name: golang-autoscaler-custom-metrics
+  - name: ((app_name))
     instances: 1
-    memory: 128M
+    memory: 1G
     disk_quota: 128M
     stack: cflinuxfs4
     buildpacks:
       - binary_buildpack
-    command: ./golang-autoscaler-custom-metrics
+    command: ./((app_name))
