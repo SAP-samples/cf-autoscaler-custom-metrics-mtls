@@ -1,14 +1,14 @@
 module github.com/asalan316/golang-autoscaler-custom-metrics
 
 go 1.22.0
-toolchain go1.23.7
+toolchain go1.24.1
 
 require (
 	code.cloudfoundry.org/lager v2.0.0+incompatible
 	github.com/cloudfoundry-community/go-cfenv v1.18.0
 	github.com/gin-gonic/gin v1.10.0
 	github.com/joefitzgerald/rainbow-reporter v0.1.0
-	github.com/onsi/ginkgo/v2 v2.23.0
+	github.com/onsi/ginkgo/v2 v2.23.3
 	github.com/onsi/gomega v1.36.2
 	github.com/sclevine/spec v1.4.0
 )
